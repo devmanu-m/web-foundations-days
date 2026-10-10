@@ -64,6 +64,10 @@ main {
   padding: 0 16px;
 }
 
+section h2 {
+  margin-top: 0;
+}
+
 main > h2,
 main > p {
   margin-left: 4px;

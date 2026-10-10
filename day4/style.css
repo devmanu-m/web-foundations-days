@@ -1,0 +1,152 @@
+/* ---------- Colour variables (light theme) ---------- */
+:root {
+  --bg: #f4f5f7;
+  --text: #222222;
+  --card: #ffffff;
+  --border: #999999;
+  --header-bg: #1f2a44;
+  --header-text: #ffffff;
+  --button-bg: #2563eb;
+  --button-hover: #1d4ed8;
+  --button-text: #ffffff;
+  --muted: #555555;
+}
+
+/* ---------- Dark theme: only redefines the variables ---------- */
+body.dark {
+  --bg: #121826;
+  --text: #e6e9f0;
+  --card: #1c2538;
+  --border: #5b6785;
+  --header-bg: #0b1020;
+  --header-text: #ffffff;
+  --button-bg: #60a5fa;
+  --button-hover: #93c5fd;
+  --button-text: #0b1020;
+  --muted: #aab3c5;
+}
+
+/* ---------- Reset and base ---------- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.6;
+  color: var(--text);
+  background-color: var(--bg);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ---------- Header and footer ---------- */
+header {
+  background-color: var(--header-bg);
+  color: var(--header-text);
+  text-align: center;
+  padding: 32px 16px;
+}
+
+header h1 {
+  margin: 0 0 8px;
+}
+
+header p {
+  margin: 0;
+}
+
+footer {
+  text-align: center;
+  padding: 24px 16px;
+  color: var(--muted);
+}
+
+/* ---------- Main card ---------- */
+main {
+  max-width: 700px;
+  margin: 24px auto;
+  padding: 0 16px;
+}
+
+section {
+  background-color: var(--card);
+  padding: 24px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+textarea {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  background-color: var(--card);
+  color: var(--text);
+  font: inherit;
+  resize: vertical;
+}
+
+/* ---------- Counters ---------- */
+#char-count,
+#word-count {
+  margin: 12px 0 0;
+}
+
+.warning {
+  color: orange;
+}
+
+.over {
+  color: red;
+  font-weight: bold;
+}
+
+/* ---------- Buttons (Flexbox row) ---------- */
+.button-row {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  border-radius: 4px;
+  padding: 10px 20px;
+  font: inherit;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover,
+button:focus {
+  background-color: var(--button-hover);
+  transform: translateY(-2px);
+}
+
+/* ---------- Small screens ---------- */
+@media (max-width: 600px) {
+  header {
+    padding: 20px 12px;
+  }
+
+  section {
+    padding: 16px;
+  }
+
+  .button-row {
+    flex-direction: column;
+  }
+}
